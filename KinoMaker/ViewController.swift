@@ -7,13 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    let repository = Repository()
+    private let repository = Repository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getServiceStatus()
+    }
+
+}
+
+// MARK: - Private functions
+
+private extension ViewController {
+    
+    func getServiceStatus() {
         repository.getServiceStatus { result in
             RequestTracker.shared.trackRequest()
             
@@ -21,14 +31,9 @@ class ViewController: UIViewController {
             case .success(let success):
                 print(success)
             case .failure(let failure):
-                print("error getFilms: \(failure.localizedDescription)")
+                print("error getServiceStatus: \(failure.localizedDescription)")
             }
         }
-        
-        
-        
     }
-
-
+    
 }
-
