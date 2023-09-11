@@ -13,8 +13,8 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        getServiceStatus()
+//        getServiceStatus()
+        getRandomFilm()
     }
 
 }
@@ -32,6 +32,19 @@ private extension ViewController {
                 print(success)
             case .failure(let failure):
                 print("error getServiceStatus: \(failure.localizedDescription)")
+            }
+        }
+    }
+    
+    func getRandomFilm() {
+        repository.getRandomFilm { result in
+            RequestTracker.shared.trackRequest()
+            
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print("error getRandomFilm: \(failure.localizedDescription)")
             }
         }
     }

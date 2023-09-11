@@ -14,6 +14,10 @@ class NetworkEngine {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method
+        // Устанавливаем заголовки из endpoint.headers
+              for (key, value) in endpoint.headers {
+                  urlRequest.setValue(value, forHTTPHeaderField: key)
+              }
        // let jsonData = try? JSONSerialization.data(withJSONObject: endpoint.body)
       //  urlRequest.httpBody = jsonData
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

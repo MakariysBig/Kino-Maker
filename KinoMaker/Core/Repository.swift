@@ -2,6 +2,7 @@ import Foundation
 
 protocol RepositoryProtocol {
     func getServiceStatus(completion: @escaping (Result< ServiceStatus, Error >) -> Void)
+    func getRandomFilm(completion: @escaping (Result< RandomFilmModel, Error >) -> Void)
 }
 
 final class Repository: RepositoryProtocol {
@@ -20,6 +21,10 @@ final class Repository: RepositoryProtocol {
     
     func getServiceStatus(completion: @escaping (Result<ServiceStatus, Error>) -> Void) {
         networkEngine.request(endpoint: ServiceStatusEndpoint.getData, completion: completion)
+    }
+    
+    func getRandomFilm(completion: @escaping (Result<RandomFilmModel, Error>) -> Void) {
+        networkEngine.request(endpoint: RandomFilmEndpoint.getData, completion: completion)
     }
     
 }
