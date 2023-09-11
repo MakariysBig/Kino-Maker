@@ -27,7 +27,17 @@ enum ServiceStatusEndpoint: Endpoint {
         switch self {
         case .getData:
             return [
-                     URLQueryItem(name: "X-API-KEY", value: "4M53ACZ-MH849JV-JHNG3HV-ZH0RAJW"),
+//                     URLQueryItem(name: "X-API-KEY", value: "4M53ACZ-MH849JV-JHNG3HV-ZH0RAJW"),
+            ]
+        }
+    }
+    
+    var headers: [String: String] {
+        switch self {
+        case .getData:
+            return [
+                "X-API-KEY": "4M53ACZ-MH849JV-JHNG3HV-ZH0RAJW",
+                // Добавьте другие заголовки, если необходимо
             ]
         }
     }
