@@ -25,6 +25,7 @@ final class RequestTracker {
         
         if !isDateToday {
             UserDefaultsManager.requestCount = 200
+            UserDefaultsManager.previousDay = Date()
         }
         
         return UserDefaultsManager.requestCount

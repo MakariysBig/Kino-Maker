@@ -21,16 +21,16 @@ import Foundation
 
 // MARK: - Welcome
 struct RandomFilmModel: Codable {
-    let docs: [Doc]
+    let docs: [FilmInfo]
     let total, limit, page, pages: Int
 }
 
 // MARK: - Doc
-struct Doc: Codable {
+struct FilmInfo: Codable {
     let externalId: ExternalID
     let rating, votes: Rating
     let movieLength, id: Int
-    let type: TypeEnum
+//    let type: TypeEnum
     let name, description: String
     let year: Int
     let poster: Poster

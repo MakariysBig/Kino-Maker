@@ -4,13 +4,14 @@ final class MovieSelectionViewController: UIViewController {
 
     private let viewModel: MovieSelectionViewModel
     private let repository = Repository()
+    private var films = [FilmInfo]()
     
     // MARK: - UI
     
     let posterImage: UIImageView = {
         let image = UIImageView()
         image.clipsToBounds = true
-        image.contentMode = .scaleAspectFill
+        image.contentMode = .scaleAspectFit
         image.backgroundColor = .yellow
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -19,6 +20,7 @@ final class MovieSelectionViewController: UIViewController {
     let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.numberOfLines = .zero
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -54,7 +56,9 @@ final class MovieSelectionViewController: UIViewController {
             posterImage.widthAnchor.constraint(equalToConstant: 100),
             
             descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: posterImage.bottomAnchor, constant: 20)
+            descriptionLabel.topAnchor.constraint(equalTo: posterImage.bottomAnchor, constant: 20),
+            descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
         ])
     }
     
@@ -78,59 +82,34 @@ private extension MovieSelectionViewController {
     }
     
     func getRandomFilm() {
-        repository.getRandomFilm { result in
-            RequestTracker.shared.trackRequest()
-
-            switch result {
-            case .success(let success):
-                print(success.docs.count)
-//                let path = success.logo?.url
-//                self.posterImage.loadImageFromUrl(path: path)
-//                self.descriptionLabel.text = String(success.id ?? 0)
-
-            case .failure(let failure):
-                print("error getRandomFilm: \(failure.localizedDescription)")
+        
+        if UserDefaultsManager.filmArray.isEmpty {
+            print("from Network")
+            repository.getRandomFilm { result in
+                RequestTracker.shared.trackRequest()
+                
+                switch result {
+                case .success(let model):
+                    UserDefaultsManager.filmArray = model.docs
+                    print(model.docs.count)
+                    print(model.limit)
+                    //                let array = model.docs[0].poster.previewURL
+                    let path = model.docs[0].poster.previewURL
+                    self.posterImage.loadImageFromUrl(path: path)
+                    self.descriptionLabel.text = model.docs[0].description
+                    
+                case .failure(let failure):
+                    print("error getRandomFilm: \(failure.localizedDescription)")
+                }
             }
+        } else {
+            print("from DB")
+            films = UserDefaultsManager.filmArray
+            
+            let path = films[0].poster.previewURL
+            self.posterImage.loadImageFromUrl(path: path)
+            self.descriptionLabel.text = films[0].description
         }
     }
     
-}
-
-import UIKit
-
-extension UIImageView {
-    func loadImageFromUrl(path: String?) {
-        guard let path = path else {
-//            self.image = UIImage(systemName: "photo.circle")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
-            return
-        }
-
-        let urlString = path
-//        let placeholder = UIImage(systemName: "photo.circle")?.withTintColor(.systemOrange, renderingMode: .alwaysOriginal)
-//        self.image = placeholder
-
-        guard let url = URL(string: urlString) else {
-            return
-        }
-
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-//                DispatchQueue.main.async {
-////                    self.image = placeholder
-//                }
-                return
-            }
-            
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                self.image = image
-            }
-        }
-        task.resume()
-    }
-}
-
-enum CoverSize: String {
-    case m = "M"
-    case l = "L"
 }

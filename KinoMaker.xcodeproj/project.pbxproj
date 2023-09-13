@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB0496462AAF916400CA3D87 /* MovieSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */; };
+		AB6E2BE22AB19BDC00849573 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */; };
 		AB8F16072AAA52BB0020FB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F16062AAA52BB0020FB98 /* AppDelegate.swift */; };
 		AB8F16092AAA52BB0020FB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F16082AAA52BB0020FB98 /* SceneDelegate.swift */; };
 		AB8F160B2AAA52BB0020FB98 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F160A2AAA52BB0020FB98 /* MovieSelectionViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewModel.swift; sourceTree = "<group>"; };
+		AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		AB8F16032AAA52BB0020FB98 /* KinoMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8F16062AAA52BB0020FB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB8F16082AAA52BB0020FB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				AB8F16112AAA52BD0020FB98 /* LaunchScreen.storyboard */,
 				AB8F16142AAA52BD0020FB98 /* Info.plist */,
 				AB8F16362AAB0C740020FB98 /* UserDefaultsManager.swift */,
+				AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				AB8F16092AAA52BB0020FB98 /* SceneDelegate.swift in Sources */,
 				AB8F16372AAB0C740020FB98 /* UserDefaultsManager.swift in Sources */,
 				AB8F16282AAA53AA0020FB98 /* StrategyEndpoint.swift in Sources */,
+				AB6E2BE22AB19BDC00849573 /* UIImageView + Extension.swift in Sources */,
 				AB8F16272AAA53AA0020FB98 /* StrategyModel.swift in Sources */,
 				AB0496462AAF916400CA3D87 /* MovieSelectionViewModel.swift in Sources */,
 				AB8F16212AAA539C0020FB98 /* Repository.swift in Sources */,

@@ -12,6 +12,22 @@ enum UserDefaultsManager {
         set { UserDefaults.standard.setValue(newValue, forKey: Constants.previousDay) }
     }
     
+    static var filmArray: [FilmInfo] {
+        get {
+            var array = [FilmInfo]()
+            if let data = UserDefaults.standard.value(forKey: "filmArray") as? Data {
+                if let dataFromDB = try? PropertyListDecoder().decode(Array<FilmInfo>.self, from: data) {
+                    array = dataFromDB
+                }
+            }
+            return array
+        }
+        
+        set {
+            UserDefaults.standard.setValue(try? PropertyListEncoder().encode(newValue), forKey:"filmArray")
+        }
+    }
+    
 }
 
 // MARK: - Constans
