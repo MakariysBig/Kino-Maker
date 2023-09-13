@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB0496462AAF916400CA3D87 /* MovieSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */; };
 		AB6E2BE22AB19BDC00849573 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */; };
+		AB6E2BE52AB1A17B00849573 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB6E2BE42AB1A17B00849573 /* SnapKit */; };
 		AB8F16072AAA52BB0020FB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F16062AAA52BB0020FB98 /* AppDelegate.swift */; };
 		AB8F16092AAA52BB0020FB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F16082AAA52BB0020FB98 /* SceneDelegate.swift */; };
 		AB8F160B2AAA52BB0020FB98 /* MovieSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F160A2AAA52BB0020FB98 /* MovieSelectionViewController.swift */; };
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6E2BE52AB1A17B00849573 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +185,9 @@
 			dependencies = (
 			);
 			name = KinoMaker;
+			packageProductDependencies = (
+				AB6E2BE42AB1A17B00849573 /* SnapKit */,
+			);
 			productName = KinoMaker;
 			productReference = AB8F16032AAA52BB0020FB98 /* KinoMaker.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +216,9 @@
 				Base,
 			);
 			mainGroup = AB8F15FA2AAA52BB0020FB98;
+			packageReferences = (
+				AB6E2BE32AB1A17B00849573 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AB8F16042AAA52BB0020FB98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -466,6 +474,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB6E2BE32AB1A17B00849573 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB6E2BE42AB1A17B00849573 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB6E2BE32AB1A17B00849573 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB8F15FB2AAA52BB0020FB98 /* Project object */;
 }

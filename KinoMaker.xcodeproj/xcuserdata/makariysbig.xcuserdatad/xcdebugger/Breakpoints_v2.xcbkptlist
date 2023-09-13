@@ -110,8 +110,8 @@
             filePath = "KinoMaker/MovieSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getRandomFilm()"
             landmarkType = "7">
             <Locations>
@@ -189,13 +189,13 @@
             filePath = "KinoMaker/MovieSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "getRandomFilm()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - c5c5ada3f56f707c"
+                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - c5c5ada3f56f7144"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -205,12 +205,12 @@
                   urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
                   offsetFromSymbolStart = "100">
                </Location>
                <Location
-                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - 84fbd65c10c5bb1e"
+                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - 84fbd65c10c5ba26"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -220,12 +220,12 @@
                   urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
                   offsetFromSymbolStart = "336">
                </Location>
                <Location
-                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - c5c5ada3f56f709d"
+                  uuid = "3B0EA028-6E33-4661-B05B-E029E8D0D821 - c5c5ada3f56f7165"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -235,8 +235,8 @@
                   urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
                   offsetFromSymbolStart = "100">
                </Location>
             </Locations>
@@ -252,8 +252,8 @@
             filePath = "KinoMaker/MovieSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "getRandomFilm()"
             landmarkType = "7">
          </BreakpointContent>
