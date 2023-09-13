@@ -1,36 +1,35 @@
 import Foundation
 
 class NetworkEngine {
-
+    
     func request<T: Codable>(endpoint: Endpoint, completion: @escaping (Result< T, Error>) -> Void) {
         var components = URLComponents()
         components.scheme = endpoint.scheme
         components.host = endpoint.baseURl
         components.path = endpoint.path
         components.queryItems = endpoint.parameters
-
-
+        
+        
         guard let url = components.url else { return }
-
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = endpoint.method
-        // Устанавливаем заголовки из endpoint.headers
-              for (key, value) in endpoint.headers {
-                  urlRequest.setValue(value, forHTTPHeaderField: key)
-              }
-       // let jsonData = try? JSONSerialization.data(withJSONObject: endpoint.body)
-      //  urlRequest.httpBody = jsonData
+        
+        for (key, value) in endpoint.headers {
+            urlRequest.setValue(value, forHTTPHeaderField: key)
+        }
+       
         urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         let session = URLSession(configuration: .default)
         let dataTask = session.dataTask(with: urlRequest) { data, response, error in
-
+            
             guard error == nil else {
                 completion(.failure(error!))
                 return
             }
-
+            
             guard response != nil, let data = data else { return }
-
+            
             DispatchQueue.main.async {
                 var responseObject: T
                 do {

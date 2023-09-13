@@ -8,46 +8,46 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6884BB32-50AB-43A9-AFCA-BFC1ACFA3786"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KinoMaker/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "getRandomFilm()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6884BB32-50AB-43A9-AFCA-BFC1ACFA3786 - 14b88df1cca1a3da"
+                  uuid = "6884BB32-50AB-43A9-AFCA-BFC1ACFA3786 - fb47ed0257f3d21e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.ViewController.getRandomFilm() -&gt; ()"
                   moduleName = "KinoMaker"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/makariysbig/Desktop/kinoMaker/KinoMaker/KinoMaker/ViewController.swift"
+                  urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "176">
                </Location>
                <Location
-                  uuid = "6884BB32-50AB-43A9-AFCA-BFC1ACFA3786 - 14b88df1cca1a3da"
+                  uuid = "6884BB32-50AB-43A9-AFCA-BFC1ACFA3786 - fb47ed0257f3d21e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.ViewController.getRandomFilm() -&gt; ()"
                   moduleName = "KinoMaker"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/makariysbig/Desktop/kinoMaker/KinoMaker/KinoMaker/ViewController.swift"
+                  urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "180">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "172">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -56,62 +56,30 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "69E03850-65D8-42E1-8BA0-F377660A6D30"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KinoMaker/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "getRandomFilm()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "69E03850-65D8-42E1-8BA0-F377660A6D30 - 14b88df1cca1a3a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.ViewController.getRandomFilm() -&gt; ()"
-                  moduleName = "KinoMaker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/makariysbig/Desktop/kinoMaker/KinoMaker/KinoMaker/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "412">
-               </Location>
-               <Location
-                  uuid = "69E03850-65D8-42E1-8BA0-F377660A6D30 - 14b88df1cca1a3a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.ViewController.getRandomFilm() -&gt; ()"
-                  moduleName = "KinoMaker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/makariysbig/Desktop/kinoMaker/KinoMaker/KinoMaker/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "332">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ECA95C71-D013-4D13-9B96-50C421E6AB66"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KinoMaker/Core/NetworkEngine.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "request(endpoint:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,15 +88,94 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A552D535-9B12-438E-A5D4-59D0DAA70C8B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KinoMaker/Core/NetworkEngine.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "request(endpoint:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E9F5DAC-8FAA-4FC0-9A04-87EBB0A219D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KinoMaker/MovieSelectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "getRandomFilm()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E9F5DAC-8FAA-4FC0-9A04-87EBB0A219D6 - c5c5ada3f56f709d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.MovieSelectionViewController.getRandomFilm() -&gt; ()"
+                  moduleName = "KinoMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "2E9F5DAC-8FAA-4FC0-9A04-87EBB0A219D6 - c5c5ada3f56f707c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.MovieSelectionViewController.getRandomFilm() -&gt; ()"
+                  moduleName = "KinoMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "2E9F5DAC-8FAA-4FC0-9A04-87EBB0A219D6 - c5c5ada3f56f707c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;KinoMaker.RandomFilmModel, Swift.Error&gt;) -&gt; () in KinoMaker.MovieSelectionViewController.getRandomFilm() -&gt; ()"
+                  moduleName = "KinoMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/makariysbig/Kino-Maker/KinoMaker/MovieSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "420">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD16AC03-00FF-484A-951C-AD6641D67680"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KinoMaker/RequestTracker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getRequestCount()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
