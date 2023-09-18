@@ -1,10 +1,13 @@
+import SnapKit
 import UIKit
+
 
 final class MovieSelectionViewController: UIViewController {
 
     private let viewModel: MovieSelectionViewModel
     private let repository = Repository()
     private var films = [FilmInfo]()
+    private var index = 0
     
     // MARK: - UI
     
@@ -31,6 +34,13 @@ final class MovieSelectionViewController: UIViewController {
         label.numberOfLines = .zero
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    let positiveButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(didTapPositiveButton), for: .touchUpInside)
+        return button
     }()
     
     // MARK: - Initialize
@@ -86,7 +96,7 @@ private extension MovieSelectionViewController {
                     print(model.docs.count)
                     print(model.limit)
                     //                let array = model.docs[0].poster.previewURL
-                    let path = model.docs[0].poster.previewURL
+                    let path = model.docs[0].logo?.url
                     self.posterImage.loadImageFromUrl(path: path)
                     self.descriptionLabel.text = model.docs[0].description
                     
@@ -97,36 +107,44 @@ private extension MovieSelectionViewController {
         } else {
             print("from DB")
             films = UserDefaultsManager.filmArray
-            
-            let path = films[0].poster.previewURL
-            self.posterImage.loadImageFromUrl(path: path)
-            self.descriptionLabel.text = films[0].description
+            self.updateView(with: index)
         }
+    }
+    
+    func updateView(with index: Int) {
+        let path = films[index].poster.previewURL
+        posterImage.loadImageFromUrl(path: path)
+        descriptionLabel.text = films[index].description
     }
     
     func setupLayout() {
         view.addSubview(coverView)
         NSLayoutConstraint.activate([
-            coverView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            coverView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
-            coverView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            coverView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            coverView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            coverView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            coverView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            coverView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
         
         
-        [posterImage, descriptionLabel].forEach { coverView.addSubview($0) }
+        [posterImage, descriptionLabel, positiveButton].forEach { coverView.addSubview($0) }
         
-        NSLayoutConstraint.activate([
-            posterImage.centerYAnchor.constraint(equalTo: coverView.centerYAnchor),
-            posterImage.centerXAnchor.constraint(equalTo: coverView.centerXAnchor),
-            posterImage.heightAnchor.constraint(equalToConstant: 100),
-            posterImage.widthAnchor.constraint(equalToConstant: 100),
-            
-            descriptionLabel.centerXAnchor.constraint(equalTo: coverView.centerXAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: posterImage.bottomAnchor, constant: 20),
-            descriptionLabel.leadingAnchor.constraint(equalTo: coverView.leadingAnchor, constant: 16),
-            descriptionLabel.trailingAnchor.constraint(equalTo: coverView.trailingAnchor, constant: -16),
-        ])
+        posterImage.snp.makeConstraints {
+            $0.top.leading.equalToSuperview()
+            $0.height.equalToSuperview().multipliedBy(0.5)
+            $0.width.equalToSuperview().multipliedBy(0.6)
+        }
+        
+        positiveButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(16)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(posterImage.snp.bottom).offset(20)
+            $0.leading.trailing.equalToSuperview().inset(16)
+        }
     }
     
     func setupGesture() {
@@ -161,6 +179,11 @@ private extension MovieSelectionViewController {
         }
         
         sender.setTranslation(.zero, in: card)
+    }
+    
+    @objc func didTapPositiveButton() {
+        index = Int(arc4random_uniform(251))
+        updateView(with: index)
     }
     
 }
