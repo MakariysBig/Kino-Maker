@@ -16,9 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        let movieView = MovieSelectionViewModel()
-        let movieVC = MovieSelectionViewController(viewModel: movieView)
-        let rootVC = UINavigationController(rootViewController: movieVC)
+        let viewModel = MovieSelectionViewModel()
+        let vc = UserSelectionViewController()
+//        let vc = MovieSelectionViewController(viewModel: viewModel, user: .firstUser)
+        let rootVC = UINavigationController(rootViewController: vc)
         
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()

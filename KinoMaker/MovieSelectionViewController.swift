@@ -1,6 +1,11 @@
 import SnapKit
 import UIKit
 
+enum User {    
+    case firstUser
+    case secondUser
+}
+
 
 final class MovieSelectionViewController: UIViewController {
 
@@ -9,6 +14,8 @@ final class MovieSelectionViewController: UIViewController {
     private var films = [FilmInfo]()
     private var index = 0
     let notification = NotificationHandler()
+    
+    let user: User
     
     // MARK: - UI
     
@@ -46,8 +53,9 @@ final class MovieSelectionViewController: UIViewController {
     
     // MARK: - Initialize
     
-    init(viewModel: MovieSelectionViewModel) {
+    init(viewModel: MovieSelectionViewModel, user: User) {
         self.viewModel = viewModel
+        self.user = user
         super.init(nibName: nil, bundle: nil)
     }
     
