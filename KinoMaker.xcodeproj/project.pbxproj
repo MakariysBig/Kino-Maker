@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB0496462AAF916400CA3D87 /* MovieSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */; };
+		AB18BCF42ABC3C8A004ABA71 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18BCF32ABC3C8A004ABA71 /* NotificationHandler.swift */; };
 		AB6E2BE22AB19BDC00849573 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */; };
 		AB6E2BE52AB1A17B00849573 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB6E2BE42AB1A17B00849573 /* SnapKit */; };
 		AB8F16072AAA52BB0020FB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F16062AAA52BB0020FB98 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionViewModel.swift; sourceTree = "<group>"; };
+		AB18BCF32ABC3C8A004ABA71 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		AB6E2BE12AB19BDC00849573 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		AB8F16032AAA52BB0020FB98 /* KinoMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8F16062AAA52BB0020FB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				AB8F161B2AAA52ED0020FB98 /* App */,
 				AB8F160A2AAA52BB0020FB98 /* MovieSelectionViewController.swift */,
+				AB18BCF32ABC3C8A004ABA71 /* NotificationHandler.swift */,
 				AB0496452AAF916400CA3D87 /* MovieSelectionViewModel.swift */,
 				AB8F16332AAB0AEB0020FB98 /* RequestTracker */,
 				AB8F161C2AAA53340020FB98 /* NetworkLayer */,
@@ -248,6 +251,7 @@
 				AB8F16232AAA539C0020FB98 /* EndpointsProtocol.swift in Sources */,
 				AB8F16322AAA5C210020FB98 /* RandomFilmEndpoint.swift in Sources */,
 				AB8F160B2AAA52BB0020FB98 /* MovieSelectionViewController.swift in Sources */,
+				AB18BCF42ABC3C8A004ABA71 /* NotificationHandler.swift in Sources */,
 				AB8F16302AAA5C110020FB98 /* RandomFilmModel.swift in Sources */,
 				AB8F162D2AAA54220020FB98 /* ServiceStatusEndpoint.swift in Sources */,
 				AB8F16222AAA539C0020FB98 /* NetworkEngine.swift in Sources */,

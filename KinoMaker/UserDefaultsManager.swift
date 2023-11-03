@@ -28,6 +28,38 @@ enum UserDefaultsManager {
         }
     }
     
+    static var firstUser: [FilmInfo] {
+        get {
+            var array = [FilmInfo]()
+            if let data = UserDefaults.standard.value(forKey: "firstUser") as? Data {
+                if let dataFromDB = try? PropertyListDecoder().decode(Array<FilmInfo>.self, from: data) {
+                    array = dataFromDB
+                }
+            }
+            return array
+        }
+        
+        set {
+            UserDefaults.standard.setValue(try? PropertyListEncoder().encode(newValue), forKey:"firstUser")
+        }
+    }
+    
+    static var secondUser: [FilmInfo] {
+        get {
+            var array = [FilmInfo]()
+            if let data = UserDefaults.standard.value(forKey: "secondUser") as? Data {
+                if let dataFromDB = try? PropertyListDecoder().decode(Array<FilmInfo>.self, from: data) {
+                    array = dataFromDB
+                }
+            }
+            return array
+        }
+        
+        set {
+            UserDefaults.standard.setValue(try? PropertyListEncoder().encode(newValue), forKey:"secondUser")
+        }
+    }
+    
 }
 
 // MARK: - Constans

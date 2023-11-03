@@ -8,6 +8,7 @@ final class MovieSelectionViewController: UIViewController {
     private let repository = Repository()
     private var films = [FilmInfo]()
     private var index = 0
+    let notification = NotificationHandler()
     
     // MARK: - UI
     
@@ -62,6 +63,9 @@ final class MovieSelectionViewController: UIViewController {
         getRandomFilm()
         setupLayout()
         setupGesture()
+        notification.askPermission()
+        
+        notification.sendNotification(date: Date(), type: "time", title: "hi", body: "ffff")
     }
     
 }
@@ -164,25 +168,56 @@ private extension MovieSelectionViewController {
         card.center = CGPoint(x: card.center.x + point.x, y: card.center.y + point.y)
         
         if xFromCenter > .zero {
-            print("right")
+            // дополнительные действия при свайпе в одну из сторон
+//            print("right")
         } else {
-            print("left")
+//            print("left")
         }
         
         card.alpha = 1 - (abs(xFromCenter) / abs(self.view.center.x))
         
         if sender.state == UIGestureRecognizer.State.ended {
+            
+            if card.center.x < 100 {
+                // move off to left side
+                UIView.animate(withDuration: 0.3) {
+                    card.center = CGPoint(x: card.center.x - self.view.frame.width, y: card.center.y)
+                    card.alpha = 0
+
+                    self.updateScreen()
+                }
+                
+                
+            } else if card.center.x > (view.frame.width - 100) {
+                // move off to right side
+                UIView.animate(withDuration: 0.3) {
+                    card.center = CGPoint(x: card.center.x + self.view.frame.width, y: card.center.y)
+                    card.alpha = 0
+                    
+                    self.updateScreen()
+                }
+                
+                
+            }
+            
+            card.center = self.view.center
+            
             UIView.animate(withDuration: 0.3) {
-                card.center = self.view.center
+//                card.center = self.view.center
                 card.alpha = 1
             }
+            
         }
         
         sender.setTranslation(.zero, in: card)
     }
     
     @objc func didTapPositiveButton() {
-        index = Int(arc4random_uniform(251))
+        updateScreen()
+    }
+    
+    func updateScreen() {
+        index = Int(arc4random_uniform(249))
         updateView(with: index)
     }
     
